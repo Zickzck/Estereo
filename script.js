@@ -516,6 +516,71 @@ function vaciarCarrito() {
 
     actualizarContador();
 
+
+    // =========================
+    // REINICIAR FORMULARIO
+    // =========================
+
+    const formulario =
+        document.getElementById(
+            "formulario-pedido"
+        );
+
+
+    if (formulario) {
+
+        formulario.reset();
+
+    }
+
+
+    // =========================
+    // LIMPIAR RESUMEN
+    // =========================
+
+    const resumen =
+        document.getElementById(
+            "resumen-productos"
+        );
+
+
+    const totalResumen =
+        document.getElementById(
+            "resumen-total"
+        );
+
+
+    if (resumen) {
+
+        resumen.innerHTML = "";
+
+    }
+
+
+    if (totalResumen) {
+
+        totalResumen.textContent = "$0";
+
+    }
+
+
+    // =========================
+    // OCULTAR FORMULARIO
+    // =========================
+
+    const formularioCompra =
+        document.getElementById(
+            "formulario-compra"
+        );
+
+
+    if (formularioCompra) {
+
+        formularioCompra.style.display =
+            "none";
+
+    }
+
 }
 
 
